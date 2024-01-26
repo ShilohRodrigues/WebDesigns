@@ -11,11 +11,13 @@ const banner = document.getElementById("banner");
 document.addEventListener("scroll", () => {
   const currentScrollTop = window.scrollY;
   if (currentScrollTop > lastScrollTop) {  // User is scrolling down
-    header.style.top = `calc(-${headerStyles.getPropertyValue("height")} - 1rem)`; // Adjust the value based on the height of your header
+    header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
+    if (lastScrollTop == 0) header.classList.add('header-background'); 
     if (mobileNavOpen) openMobileNav(); //Close mobile nav
   } 
   else {   // User is scrolling up
     header.style.top = "0";
+    if (currentScrollTop == 0) header.classList.remove('header-background');
   }
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 });
@@ -27,27 +29,25 @@ document.addEventListener("scroll", () => {
  *  */ 
 let mobileNavOpen = false;
 const openMenu = document.getElementById("hamburgerMenu");
+const closeMenu = document.getElementById("closeMenu");
 const mobileNav = document.getElementById("mobileNav");
 
 const mobileNavStyles = window.getComputedStyle(mobileNav);
-mobileNav.style.top = `${headerStyles.getPropertyValue("height")}`;
 
 openMenu.addEventListener("click", openMobileNav); 
 function openMobileNav() {
-  if (mobileNavOpen) {
-    openMenu.classList.remove('close-icon');
-    mobileNav.classList.remove('open-nav');
-    mobileNavOpen = false;
-  }
-  else {
-    openMenu.classList.add('close-icon');
-    mobileNav.classList.add('open-nav');
-    mobileNavOpen = true;
-  }
+  mobileNav.classList.add('open-nav');
+  mobileNavOpen = true;
 }
+closeMenu.addEventListener("click", closeMobileNav); 
+function closeMobileNav() {
+  mobileNav.classList.remove('open-nav');
+  mobileNavOpen = false;
+}
+
 //Close the mobile nav if the window is resized 
 window.addEventListener("resize", () => {
-  if (mobileNavOpen) openMobileNav();
+  if (mobileNavOpen) closeMobileNav();
 });
 
 /** Animations
