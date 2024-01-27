@@ -9,7 +9,7 @@
   --bg: #f5f5f5;
   --bg-secondary: #254d25;
   --primary-color: #537E89;
-  --primary-active-color: #BFD7DE;
+  --primary-active-color: #85FF85;
   --txt-color: #000;
   --txt-focus: #000;
   --heading-font: "Garet", sans-serif;
@@ -37,8 +37,8 @@ h1 {
 }
 h2 {
   font-family: var(--heading-font);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
 }
 h3 {
   font-family: var(--heading-font);
@@ -117,26 +117,19 @@ section {
   max-width: var(--page-width-small);
   padding: 0 var(--left-right-padding);
 }
+.grid {
+  display: grid;
+}
 .grid-center {
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
-.grid-gap-1 {
+.col-3 {
+  grid-template-columns: repeat(3, auto);
+}
+.gap {
   gap: 1rem;
-}
-.grid-2-col {
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-.grid-col-span-2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
-}
-.grid-col-1-span-1 {
-  -ms-grid-column: 1;
-  grid-column: 1;
 }
 .center-me {
   margin-left: auto;
@@ -318,4 +311,35 @@ main {
   padding-top: 4rem;
   width: 100%;
   background: var(--bg);
+
+  min-height: 1000px;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 2rem;
+}
+.tagline:before {
+  content: '';
+  display: block;
+  background-color: var(--primary-active-color);
+  height: 0.2rem;
+  width: 2rem;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.text-w-title {
+  width: clamp(200px, 30%, 30%);
+}
+@media screen and (max-width: 464px) {
+  .text-w-title {
+    width: 100%;
+  }
 }
