@@ -11,8 +11,13 @@ const banner = document.getElementById("banner");
 document.addEventListener("scroll", () => {
   const currentScrollTop = window.scrollY;
   if (currentScrollTop > lastScrollTop) {  // User is scrolling down
+    if (currentScrollTop - lastScrollTop < 90) return; //Only hide the header after a minimum scroll down
     header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
-    if (lastScrollTop == 0) header.classList.add('header-background'); 
+    // Change the background of the header once scrolled down...
+    // Wait half a second to allow the header to hide first
+    if (lastScrollTop == 0)  {
+      setTimeout(() => {header.classList.add('header-background');}, 300)
+    }
     if (mobileNavOpen) openMobileNav(); //Close mobile nav
   } 
   else {   // User is scrolling up
