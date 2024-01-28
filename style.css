@@ -304,6 +304,7 @@ header{
   background-size: cover;
   background-attachment: fixed;
   height: 700px;
+  max-height: 95vh;
 }
 .banner-content {
   height: 100%;
