@@ -1,7 +1,6 @@
 /** Main header functions
  * 
  *  Hiding the header on scroll down
- *  Changing active header item
  * 
  *  */ 
 let lastScrollTop = 0;
@@ -17,7 +16,7 @@ document.addEventListener("scroll", () => {
     // Change the background of the header once scrolled down...
     // Wait half a second to allow the header to hide first
     if (lastScrollTop == 0)  {
-      setTimeout(() => {header.classList.add('header-background');}, 300)
+      setTimeout(() => {header.classList.add('header-background')}, 300)
     }
     if (mobileNavOpen) openMobileNav(); //Close mobile nav
   } 
@@ -29,15 +28,20 @@ document.addEventListener("scroll", () => {
 });
 
 // Get all the header items in the main header
-const headerItems = document.getElementsByClassName("header-item");
+const desktopHeader = document.getElementById("desktopNav");
+const headerItems = desktopHeader.getElementsByClassName("header-item");
 // Loop through the buttons and add the active class to the current/clicked button
 for (let i = 0; i < headerItems.length; i++) {
   headerItems[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active-header");
-    current[0].className = current[0].className.replace(" active-header", "");
+    const actives = document.getElementsByClassName("active-header");
+    for (let j = 0; j < actives.length; j++) {
+      console.log(actives[j]);
+      actives[j].classList.remove("active-header");
+    }
     this.className += " active-header";
   });
 }
+
 
 /** Mobile nav
  * 
@@ -60,6 +64,20 @@ closeMenu.addEventListener("click", closeMobileNav);
 function closeMobileNav() {
   mobileNav.classList.remove('open-nav');
   mobileNavOpen = false;
+}
+
+// Get all the header items in the mobile header
+const mobileHeaderItems = mobileNav.getElementsByClassName("header-item");
+// Loop through the buttons and add the active class to the current/clicked button
+for (let i = 0; i < mobileHeaderItems.length; i++) {
+  mobileHeaderItems[i].addEventListener("click", function() {
+    const actives = document.getElementsByClassName("active-mobile-header");
+    for (let j = 0; j < actives.length; j++) {
+      console.log(actives[j]);
+      actives[j].classList.remove("active-mobile-header");
+    }
+    this.className += " active-mobile-header";
+  });
 }
 
 //Close the mobile nav if the window is resized 
