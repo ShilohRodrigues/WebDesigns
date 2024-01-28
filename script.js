@@ -1,6 +1,7 @@
 /** Main header functions
  * 
  *  Hiding the header on scroll down
+ *  Changing active header item
  * 
  *  */ 
 let lastScrollTop = 0;
@@ -26,6 +27,17 @@ document.addEventListener("scroll", () => {
   }
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 });
+
+// Get all the header items in the main header
+const headerItems = document.getElementsByClassName("header-item");
+// Loop through the buttons and add the active class to the current/clicked button
+for (let i = 0; i < headerItems.length; i++) {
+  headerItems[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active-header");
+    current[0].className = current[0].className.replace(" active-header", "");
+    this.className += " active-header";
+  });
+}
 
 /** Mobile nav
  * 

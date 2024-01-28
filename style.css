@@ -126,9 +126,8 @@ section {
   grid-template-columns: repeat(3, auto);
 }
 .gap {
-  gap: 1rem;
+  gap: 2rem;
 }
-
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -148,7 +147,6 @@ section {
     width: 90%;
   }
 }
-
 .center-me {
   margin-left: auto;
   margin-right: auto;
@@ -247,10 +245,22 @@ header{
   justify-content: space-between;
 }
 .header-nav .header-item {
+  position: relative;
   color: inherit;
+  font-weight: 700;
+  transition: .2s ease;
 }
 .header-nav .header-item:hover {
-  color: var(--txt-focus);
+  color: var(--primary-active-color);
+}
+.header-nav .active-header:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -1rem;
+  background-color: var(--primary-active-color);
 }
 .header-nav-mobile {
   display: none;
@@ -324,7 +334,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
   padding-top: 4rem;
   width: 100%;
   background: var(--bg);
