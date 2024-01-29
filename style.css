@@ -424,6 +424,7 @@ main {
   border-radius: 15px;
   backdrop-filter: blur(3px);
   padding-top: 1rem;
+  width: 95% !important;
 }
 form {
   padding: 1rem 0;
