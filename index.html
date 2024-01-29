@@ -31,9 +31,9 @@
     <a href="#contact" class="header-item">Contact</a>
   </nav>
 
-  <div id="banner" class="img-banner full-width grid-center">
+  <div id="banner" class="img-banner main-banner full-width grid-center">
     <div class="banner-content page-width fade-in">
-      <div class="banner-text invert-txt">
+      <div class="banner-text">
         <h1>Web Development <br /> and Design</h1>
         <p>A to Z website development using custom coded solutions for optimal perfomance and customizability.</p>
       </div>  
@@ -96,13 +96,43 @@
           <figure class="project-card col3-flex-item">
             <img src="images/MLakha.png" alt="Image for MLakha Beauty Landing page">
             <figcaption class="overlay invert-txt">
-              <h3>Landing page and booking site made with no CMS for optimal performance.</h3>
+              <h3>Landing page and booking site made with a custom coded solution.</h3>
               <a target="_blank" href="https://madhulakha.com/" class="btn">Visit Website</a>
             </figcaption>
           </figure>
         </div>
       </div>
     </section>
+
+    <section id="contact" class="img-banner full-width grid-center secondary-bg">
+      <div class="page-width grid gap-1">
+        <h2 class="tagline">GET IN TOUCH</h2>
+        <div class="page-width-small center-me">
+          <p>Leave your name and email below, and we will be in contact with you as soon as possible!</p>
+          <form id="clientRequest" class="grid-center gap full-width grid-2-col" data-netlify="true" data-netlify-recaptcha="true">
+            <input type="hidden" name="subject" value=" New " />
+            <div class="input-group">
+                <label for="clientName">Name</label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+            <div class="input-group">
+                <label for="clientEmail">Email</label>
+                <input type="text" id="clientEmail" name="email" required>
+            </div>
+            <div class="input-group grid-col-span-2" id="inputNumber">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" name="phoneNumber" id="phoneNumber">
+            </div>
+            <div class="input-group grid-col-span-2">
+                <label for="messageInput">Message</label>
+                <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
+            </div>                 
+            <div class="recaptcha grid-col-span-2" data-netlify-recaptcha="true"></div>
+            <input class="btn big-btn submit-btn grid-col-1-span-1" type="submit" name="submitForum" id="submitForum"> 
+          </form>
+        </div>
+      </div>
+  </section>
   
   </main>
   
