@@ -45,6 +45,11 @@ h3 {
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
 }
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
 p {
   line-height: 1.5rem;
 }
@@ -343,7 +348,7 @@ header{
 .banner-text {
   position: absolute;
   top: 30%;
-  max-width: 400px;
+  max-width: min(400px, 90%);
 }
 .banner-graphic {
   position: absolute;
