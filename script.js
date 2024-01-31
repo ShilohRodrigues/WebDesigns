@@ -21,8 +21,9 @@ document.addEventListener("scroll", () => {
     if (mobileNavOpen) openMobileNav(); //Close mobile nav
   } 
   else {   // User is scrolling up
-    header.style.top = "0";
     if (currentScrollTop == 0) header.classList.remove('header-background');
+    else if (currentScrollTop - lastScrollTop > -200) return; //Only show the header after a minimum scroll up
+    header.style.top = "0"; 
   }
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 });
