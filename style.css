@@ -157,6 +157,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 .col3-flex-item {
@@ -269,6 +270,13 @@ header{
   background-color: var(--primary-active-color);
   height: 3px;
 }
+.header-nav .active-header:after {   
+  bottom: -1rem;
+  width: 100%;
+}
+.header-nav .active-mobile-header:after {
+  width: 1rem;
+}
 .header-nav-mobile {
   display: none;
   flex-direction: column;
@@ -290,10 +298,6 @@ header{
   .header-nav .header-item:hover {
     color: var(--primary-active-color);
   }
-  .header-nav .active-header:after {   
-    bottom: -1rem;
-    width: 100%;
-  }
 }
 /* Hamburger Menu */
 @media screen and (max-width: 900px) {
@@ -312,9 +316,6 @@ header{
   }
   .header-nav .active-mobile-header {
     color: var(--primary-active-color);
-  }
-  .header-nav .active-mobile-header:after {
-    width: 1rem;
   }
 }
 
@@ -356,11 +357,11 @@ header{
   }
 }
 
+/* Main Styles */
 main {
   width: 100%;
   background: var(--bg);
 }
-
 .tagline {
   display: flex;
   align-items: center;
@@ -375,6 +376,7 @@ main {
   width: 2rem;
 }
 
+/* Project card styles */
 .project-card {
   position: relative;
   aspect-ratio: 1/1;
@@ -413,6 +415,26 @@ main {
   opacity: 1;
 }
 
+/* Img with text styles */
+.img-w-txt img {
+  height: auto;
+  width: 400px;
+  max-width: 90%;
+}
+.img-w-txt .txt {
+  flex: 1;
+  min-width: 40%;
+}
+.emphasize:after {
+  content: '';
+  display: block;
+  background-color: var(--primary-active-color);
+  height: 3px;
+  width: 2rem;
+  margin: 0.3rem 0;
+}
+
+/* form styles */
 #contact > div {
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #fff;
@@ -457,9 +479,6 @@ form {
 
 
 /* Footer Styles */
-#footer {
-  margin-top: 4rem;
-}
 footer {
   justify-content: space-between !important;
   align-items: flex-start !important;
