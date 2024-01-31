@@ -325,12 +325,18 @@ header{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   color: #fff;
 }
+@media screen and (min-width: 900px) {
+  .img-banner {
+    background-attachment: fixed;
+  }
+}
 .main-banner {
+  position: relative;
   height: 700px;
   max-height: 100vh;
+  z-index: 2;
 }
 .banner-content {
   height: 100%;
@@ -359,8 +365,10 @@ header{
 
 /* Main Styles */
 main {
+  position: relative;
   width: 100%;
   background: var(--bg);
+  z-index: 1;
 }
 .tagline {
   display: flex;
@@ -479,6 +487,12 @@ form {
 
 
 /* Footer Styles */
+#footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+  overflow: visible;
+}
 footer {
   justify-content: space-between !important;
   align-items: flex-start !important;
