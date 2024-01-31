@@ -524,7 +524,7 @@ footer > :not(.footer-logo) {
 }
 @media screen and (max-width: 900px) {
   footer > :not(.footer-logo) {
-    width: 100%;
+    width: 44%;
   }
 }
 
