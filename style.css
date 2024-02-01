@@ -52,6 +52,7 @@ h3 {
 }
 p {
   line-height: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 a, a:visited {
   display: block;
@@ -121,7 +122,6 @@ section {
 .page-width-small {
   width: 100%;
   max-width: var(--page-width-small);
-  padding: 0 var(--left-right-padding);
 }
 .grid {
   display: grid;
@@ -159,6 +159,9 @@ section {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+.align-top {
+  align-items: flex-start !important;
 }
 .col3-flex-item {
   width: 30%;
@@ -515,6 +518,7 @@ footer > :not(.footer-logo) {
 }
 .footer-block nav > * {
   line-height: 2.5rem;
+  margin-bottom: 0;
 }
 .footer-block nav a {
   transition: .2s ease;
