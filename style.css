@@ -321,7 +321,7 @@ header{
 
 /* Banner styles */
 .img-banner {
-  background-image: url(images/Banner.png);
+  background-image: url(images/Banner.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
