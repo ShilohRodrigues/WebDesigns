@@ -158,10 +158,9 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
-.align-top {
-  align-items: flex-start !important;
+.align-stretch {
+  align-items: stretch !important;
 }
 .col3-flex-item {
   width: 30%;
@@ -384,6 +383,12 @@ main {
   width: 2rem;
 }
 
+/* Service section styles */
+.sticky-section {
+  padding: 1rem;
+  background-color: var(--bg);
+}
+
 /* Project card styles */
 .project-card {
   position: relative;
@@ -408,6 +413,10 @@ main {
   text-align: center;
   padding: 0rem 2rem;
   z-index: 1;
+}
+.project-card figcaption h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 .project-card .overlay {
   position: absolute;
