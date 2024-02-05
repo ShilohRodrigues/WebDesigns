@@ -505,6 +505,7 @@ main {
   backdrop-filter: blur(3px);
   padding-top: 1rem;
   width: 95% !important;
+  max-width: 600px;
 }
 form {
   padding: 1rem 0;
