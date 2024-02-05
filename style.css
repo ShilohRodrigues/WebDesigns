@@ -162,6 +162,9 @@ section {
 .align-stretch {
   align-items: stretch !important;
 }
+.align-top {
+  align-items: flex-start !important;
+}
 .col3-flex-item {
   width: 30%;
 }
@@ -182,19 +185,18 @@ section {
 .center-txt {
   text-align: center;
 }
-.slide-in {
-  -webkit-transform: translateY(20px);
-      -ms-transform: translateY(20px);
-          transform: translateY(20px);
+.slide-in-left {
+  transform: translate(-50px, 0px);
   opacity: 0;
-  -webkit-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  -o-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.slide-in-up {
+  transform: translate(0px, 50px);
+  opacity: 0;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .slide-in-animate {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  transform: translate(0, 0);
   opacity: 1;
 }
 .fade-in {
@@ -383,11 +385,51 @@ main {
   width: 2rem;
 }
 
-/* Service section styles */
-.sticky-section {
-  padding: 1rem;
-  background-color: var(--bg);
+/* accordion section styles */
+.accordion-cont {
+  align-self: center;
 }
+.accordion {
+  max-width: 400px;
+  padding: 1rem 0;
+  background-color: var(--bg);
+  cursor: pointer;
+}
+.accordion:not(:first-child) {
+  border-top: 2px solid #dcdcdc;
+}
+.accordion-header {
+  position: relative;
+}
+.accordion-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.accordion-header:after {
+  content: url(images/icons/arrow.svg);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 2rem;
+  width: 2rem;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: transform 0.5s ease-in-out;
+}
+.accordion-content {
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.open-accordion .accordion-header {
+  color: var(--primary-active-color);
+}
+.open-accordion .accordion-header:after {
+  transform: translateY(-50%) rotate(0);
+}
+.open-accordion .accordion-content {
+  max-height: 300px !important;
+}
+
 
 /* Project card styles */
 .project-card {
@@ -437,6 +479,10 @@ main {
   height: auto;
   width: 400px;
   max-width: 90%;
+}
+.img-w-txt .sml-img {
+  width: 250px;
+  padding: 1.5rem 0;
 }
 .img-w-txt .txt {
   flex: 1;

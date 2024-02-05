@@ -91,7 +91,8 @@ window.addEventListener("resize", () => {
  *  Animates sections to slide in or fade in
  * 
  */
-const slideInElements = document.getElementsByClassName('slide-in');
+const slideInLeftElements = document.getElementsByClassName('slide-in-left');
+const slideInUpElements = document.getElementsByClassName('slide-in-up');
 const fadeInElements = document.getElementsByClassName('fade-in');
 
 // listen for scroll event and call animate function
@@ -101,13 +102,22 @@ animate();
 function animate() {
 
   //For slide in animated elements
-  for (let i = 0; i < slideInElements.length; i++) {
+  for (let i = 0; i < slideInLeftElements.length; i++) {
     let windowHeight = window.innerHeight;
-    let elementTop = slideInElements[i].getBoundingClientRect().top;
+    let elementTop = slideInLeftElements[i].getBoundingClientRect().top;
     let elementVisible = 250;
     
     if (elementTop < windowHeight - elementVisible) {
-      slideInElements[i].classList.add("slide-in-animate");
+      slideInLeftElements[i].classList.add("slide-in-animate");
+    }
+  }
+  for (let i = 0; i < slideInUpElements.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = slideInUpElements[i].getBoundingClientRect().top;
+    let elementVisible = 250;
+    
+    if (elementTop < windowHeight - elementVisible) {
+      slideInUpElements[i].classList.add("slide-in-animate");
     }
   }
   //For fade in animated elements
@@ -120,5 +130,32 @@ function animate() {
       fadeInElements[i].classList.add("fade-in-animate");
     }
   }
+
+}
+
+/**
+ * 
+ * Functionality for the accordion section
+ * 
+ */
+const accordions = document.getElementsByClassName('accordion');
+let openAccordion = accordions[0];
+openAccordion.classList.toggle("open-accordion");
+
+for (let i=0; i < accordions.length; i++) {
+
+  accordions[i].addEventListener('click', function() {
+    if (openAccordion == null) {
+      openAccordion = this;
+    }
+    else if (this != openAccordion) {
+      openAccordion.classList.toggle("open-accordion");
+      openAccordion = this;
+    }   
+    else {
+      openAccordion = null;
+    }
+    this.classList.toggle("open-accordion");   
+  })
 
 }
