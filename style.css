@@ -539,8 +539,16 @@ form {
 }
 .recaptcha {
   justify-self: flex-start;
+  overflow: hidden;
 }
-
+@media screen and (max-width: 700px) {
+  .recaptcha iframe {
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+}
 
 /* Footer Styles */
 #footer {
