@@ -136,8 +136,13 @@
         <h2 class="tagline">GET IN TOUCH</h2>
         <div class="page-width-small center-me">
           <p>Leave your name and email below, and we will be in contact with you as soon as possible!</p>
-          <form id="clientRequest" class="grid-center gap full-width grid-2-col" data-netlify="true" data-netlify-recaptcha="true">
-            <input type="hidden" name="subject" value=" New " />
+          <form 
+            id="contact_form" 
+            class="grid-center gap full-width grid-2-col" 
+            data-netlify="true" 
+            data-netlify-recaptcha="true"
+            action="pages/success.html">
+            <input type="hidden" name="subject" value="Shiloh Web Designs Contact Form Submission" />
             <div class="input-group">
                 <label for="clientName">Name</label>
                 <input type="text" id="clientName" name="clientName" required>

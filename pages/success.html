@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success!</title>
+</head>
+<body>
+  <div class="modal_wrapper">
+    <div class="shadow close_btn"></div>
+    <div class="modal">
+      <div class="modal_item s_modal">
+        <div class="modal_body">
+          <div class="s_icon">
+            &#x2705;
+          </div>
+          <div class="s_text">
+            <h2>SUCCESS</h2>
+            <p>We received your message and will be in touch as soon as possible!</p>
+          </div>
+        </div>
+        <a href="../index.html" class="s_button">
+          <button class="success_btn">Return to Page</button>
+        </a>
+      </div>
+    </div> 
+  </div>
+</body>
+</html>
+
+<style>
+  :root {
+  --bg-clr: linear-gradient(135deg, #013b45, #032F64);
+  --white: #fff;
+  --text-clr: #706f6f;
+  --success-clr: #00d26a;
+  --success-hvr: #059249;
+  --cancel-clr: #d4d9e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--bg-clr);
+  color: var(--text-clr);
+  font-size: 12px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modal_btns{
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+button{
+  display: block;
+  width: 160px;
+  border: 2px solid transparent;
+  padding: 12px 15px;
+  border-radius: 3px;
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.modal_btns button.success_btn{
+  margin-right: 10px;
+}
+
+button.success_btn{
+  background: var(--success-clr);
+}
+
+button.success_btn:hover{
+  background: var(--success-hvr);
+}
+
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_wrapper .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-clr);
+}
+
+.modal_wrapper .modal {
+  width: 350px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_wrapper .modal .modal_item{
+  width: 100%;
+  background: var(--white);
+  border-radius: 3px;
+  position: relative;
+}
+.modal_item .modal_body{
+  padding: 35px;
+  text-align: center;
+}
+.modal_item .modal_body .s_icon{
+  width: 60px;
+  height: 60px;
+  background: var(--success-clr);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin: 0 auto 15px;
+}
+
+.modal_item.s_modal .modal_body .s_text h2{
+  color:  var(--success-clr);
+}
+
+.modal_item .modal_body .s_text p{
+  margin-top: 5px;
+}
+
+.modal_item .s_button button{
+  width: 100%;
+  border-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.modal_item.s_modal.active,
+.modal_item.e_modal.active{
+  display: block;
+}
+</style>
