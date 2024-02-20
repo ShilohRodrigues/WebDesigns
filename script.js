@@ -1,3 +1,11 @@
+/**
+ * Loading screen function
+ */
+const loader = document.getElementById("loader-wrapper");
+window.onload = (event) => {
+  loader.classList.add('loaded');
+};
+
 /** Main header functions
  * 
  *  Hiding the header on scroll down

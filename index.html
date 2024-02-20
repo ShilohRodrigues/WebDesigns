@@ -14,211 +14,229 @@
   <meta property="og:description" content="Elevate your online presence with Shiloh Web Designs. Custom website development and hosting solutions." />
   <meta property="og:image" content="https://shilohwebdesigns.com/images/SocialImg.png" />
   <meta property="og:image:secure_url" content="https://shilohwebdesigns.com/images/SocialImg.png" />
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/images/Favicon.ico?">
   <link rel="canonical" href="https://shilohwebdesigns.com">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+  <link rel="preload" fetchpriority="high" as="image" href="/images/Banner.webp" type="image/webp">
   <script src="script.js" defer></script>
   <title>Shiloh Web Designs - Web Development and Design</title>
+  <!-- Google Stuff -->
+  <script type="application/ld+json">
+    {"@context" : "https://shilohwebdesigns.com",
+     "@type" : "Web Development Company",  
+      "name" : "Shiloh Web Designs",
+      "url" : "https://shilohwebdesigns.com", 
+      "logo": "https://shilohwebdesigns.com/images/SocialImg.png" }
+  </script>
 </head>
 <body>
-  
-  <div id="headerContainer" class="full-width grid-center header-container">
-    <header class="page-width">
-      <a href="/" class="logo" aria-label="Click to return to home page">
-        <object data="images/ShilohLogo.svg" title="Company Logo" alt="Company Logo">Home page</object>
-      </a>
-      <div id="hamburgerMenu" class="header-icon"> </div>
-      <nav id="desktopNav" class="header-nav header-nav-desktop invert-txt">
-        <a href="/" class="header-item active-header">Home</a>
-        <a href="#services" class="header-item">Services</a>
-        <a href="#portfolio" class="header-item">Portfolio</a>   
-        <a href="#contact" class="header-item">Contact</a>
-      </nav>
-    </header>
-  </div>
-  <nav id="mobileNav" class="header-nav header-nav-mobile">
-    <div id="closeMenu" class="close-icon"> </div>
-    <a href="/" class="header-item active-mobile-header">Home</a>
-    <a href="#services" class="header-item">Services</a>
-    <a href="#portfolio" class="header-item">Portfolio</a>   
-    <a href="#contact" class="header-item">Contact</a>
-  </nav>
-
-  <div id="banner" class="img-banner main-banner full-width grid-center">
-    <div class="banner-content page-width fade-in">
-      <div class="banner-text slide-in-left">
-        <h1>Web Development and Design</h1>
-        <p>Elevate your online presence with custom website development and hosting solutions, where high performing websites meets innovative design.</p>
-      </div>  
-      <img title="Main Banner" class="banner-graphic" src="images/BannerGraphic.webp" alt="Sample desktop image" height="400" width="700">
+  <div id="loader-wrapper" class="">
+    <div id="loader" class="page-width">
+      <object class="logo" data="images/ShilohLogo.svg" title="Company Logo" alt="Company Logo">Home page</object>
     </div>
+    <div id="loader-top" class="loader-section"></div>
+    <div id="loader-back" class="loader-section"></div>
   </div>
-
-  <main id="mainContent">
-
-    <section id="services" class="full-width grid-center fade-in">
-      <div class="page-width grid gap-1">
-        <h2 class="tagline">WHAT WE DO</h2>
-        <div class="flex-wrap align-top gap img-w-txt">
-          <div class="flex-wrap txt center-txt slide-in-left">
-            <img class="sml-img" src="images/ServiceGraphic.webp" alt="Graphic of responsive design" title="Responsive graphic" height="400" width="400">
-            <h2>Responsive Websites and Hosting</h2>
-            <p>All-in-one solutions from development to hosting, with captivating landing pages, customizable eCommerce solutions, and SEO expertise. Designed mobile first to ensure a responsive design that ranks high on google.</p>   
-          </div>
-          <div class="accordion-cont slide-in-up">
-            <div class="accordion">
-              <div class="accordion-header">
-                <h2>Landing Pages</h2>
-              </div>
-              <div class="accordion-content open-accordion">
-                <p>Elevate your online presence with our high performing websites using meticulously hand-coded solutions without the help of CMS tools like WordPress. Experience the blend of aesthetic appeal and top-notch SEO for landing pages that captivate and rank.</p>
-              </div> 
-            </div>
-            <div class="accordion">
-              <div class="accordion-header">
-                <h2>eCommerce</h2>
-              </div>
-              <div class="accordion-content">
-                <p>We provide end-to-end eCommerce solutions specializing in fully customizable Shopify stores. From concept to launch, we prioritize your vision, ensuring a user-friendly shopping experience and a visually compelling storefront that reflects your brand identity.</p>
-              </div>        
-            </div>
-            <div class="accordion">
-              <div class="accordion-header">
-                <h2>SEO Services</h2>
-              </div>
-              <div class="accordion-content">
-                <p>Boost your online visibility with our SEO expertise. We optimize your site for search engines with strategic keywords and following strict standards. We ensure your website not only looks great but ranks high, driving organic traffic and business success.</p>
-              </div>
-            </div>
-            <div class="accordion">
-              <div class="accordion-header">
-                <h2>IT Support</h2>
-              </div>
-              <div class="accordion-content">
-                <p>We provide support for maintaining and updating existing websites, ensuring seamless functionality, security, and performance. From technical tune-ups to complete revamps, trust us to keep your web presence current and secure.</p>
-              </div>
-            </div>
-         </div>
-        
-        </div>  
-      </div>
-    </section>
-
-    <section id="portfolio" class="full-width grid-center">
-      <div class="page-width grid gap fade-in">
-        <h2 class="tagline">SOME OF OUR WORK</h2>
-        <div class="flex-wrap gap">
-          <figure class="project-card col3-flex-item slide-in-left">
-            <img title="Nurse John Merch" src="images/NurseJohn.webp" alt="Image for Nurse John merch store" height="300" width="300" loading="lazy">
-            <figcaption class="overlay invert-txt">
-              <h3>Online eCommerce store for TikTok personality Nurse John to sell his merch.</h3>
-              <a target="_blank" href="https://nursejohnn.com/" class="btn">Visit Website</a>
-            </figcaption>
-          </figure>
-          <figure class="project-card col3-flex-item slide-in-left">
-            <img title="Entreprises Nortec Landing Page" src="images/Nortec.webp" alt="Image for Entreprises Nortec Landing page" height="300" width="300" loading="lazy">
-            <figcaption class="overlay invert-txt">
-              <h3>Custom landing page for local construction company.</h3>
-              <a target="_blank" href="https://www.entreprisesnortec.com/" class="btn">Visit Website</a>
-            </figcaption>
-          </figure>
-          <figure class="project-card col3-flex-item slide-in-left">
-            <img title="MLakhaBeauty Landing Page" src="images/MLakha.webp" alt="Image for MLakha Beauty Landing page" height="300" width="300" loading="lazy">
-            <figcaption class="overlay invert-txt">
-              <h3>Landing page and booking site made with a custom coded solution.</h3>
-              <a target="_blank" href="https://madhulakha.com/" class="btn">Visit Website</a>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="img-banner full-width grid-center">
-      <div class="page-width grid gap-1 fade-in">
-        <h2 class="tagline">GET IN TOUCH</h2>
-        <div class="page-width-small center-me">
-          <p>Leave your name and email below, and we will be in contact with you as soon as possible!</p>
-          <form 
-            method="POST"
-            name="contact_form"
-            id="contact_form" 
-            class="grid-center gap full-width grid-2-col" 
-            data-netlify="true" 
-            data-netlify-recaptcha="true"
-            action="pages/success.html">
-            <input type="hidden" name="subject" value="Shiloh Web Designs Contact Form Submission" />
-            <div class="input-group">
-                <label for="clientName">Name</label>
-                <input type="text" id="clientName" name="clientName" required>
-            </div>
-            <div class="input-group">
-                <label for="clientEmail">Email</label>
-                <input type="text" id="clientEmail" name="email" required>
-            </div>
-            <div class="input-group grid-col-span-2" id="inputNumber">
-                <label for="phoneNumber">Phone Number</label>
-                <input type="text" name="phoneNumber" id="phoneNumber">
-            </div>
-            <div class="input-group grid-col-span-2">
-                <label for="messageInput">Message</label>
-                <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
-            </div>                 
-            <div class="recaptcha grid-col-span-2" data-netlify-recaptcha="true"></div>
-            <input class="btn big-btn submit-btn grid-col-1-span-1" type="submit" name="submitForum" id="submitForum"> 
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="full-width grid-center">
-      <div class="page-width grid gap fade-in">
-        <h2 class="tagline">GET TO KNOW ME</h2>
-        <div class="flex-wrap img-w-txt">
-          <img title="Picture of me" class="slide-in-left" src="images/Me.webp" alt="Photo of myself" height="400" width="400" loading="lazy">
-          <div class="txt slide-in-up">
-            <h3 class="emphasize">Shiloh R.</h3>
-            <p>Hey there! I'm Shiloh, owner and lead developer at Shiloh Web Designs. Recently equipped with a Bachelor's degree in Computer Science, I bring over 5 years of dedicated and passionate programming experience to every project.</p> 
-          </div>
-        </div>
-      </div>
-    </section>
-  
-  </main>
-
-  <section id="footer" class="full-width secondary-bg invert-txt grid-center">
-    <footer class="page-width grid gap">
-      <div class="footer-block footer-logo">
+  <div id="content-wrapper">
+    <div id="headerContainer" class="full-width grid-center header-container">
+      <header class="page-width">
         <a href="/" class="logo" aria-label="Click to return to home page">
-          <object data="images/ShilohLogo.svg" alt="Company Logo" title="Company Logo"></object>
+          <object data="images/ShilohLogo.svg" title="Company Logo" alt="Company Logo">Home page</object>
         </a>
-        <p>We are a website development and design company based in Montreal QC, Canada. Offering our services to small businesses looking to make their mark on the web!</p>
-      </div>     
-      <div class="footer-block">
-        <h3>Navigation</h3>
-        <nav>
-          <a href="/" class="footer-item">Home</a>
-          <a href="#services" class="footer-item">Services</a>
-          <a href="#portfolio" class="footer-item">Portfolio</a>   
-          <a href="#contact" class="footer-item">Contact</a>
+        <div id="hamburgerMenu" class="header-icon"> </div>
+        <nav id="desktopNav" class="header-nav header-nav-desktop invert-txt">
+          <a href="/" class="header-item active-header">Home</a>
+          <a href="#services" class="header-item">Services</a>
+          <a href="#portfolio" class="header-item">Portfolio</a>   
+          <a href="#contact" class="header-item">Contact</a>
         </nav>
-      </div>
-      <div class="footer-block">
-        <h3>Services</h3>
-        <nav>
-          <p class="footer-item">Web Design</p>
-          <p class="footer-item">eCommerce</p>
-          <p class="footer-item">SEO Services</p>
-          <p class="footer-item">Support</p>
-        </nav>
-      </div>
-    </footer>
-  </section>
-  <div class="full-width grid-center secondary-bg copyright">
-    <div class="page-width">
-      <p>Made with &#x2764;&#xfe0f; by <a class="inline-link" href="index.html">Shiloh Web Designs</a></p>
-      <p>© <script>document.write(new Date().getFullYear())</script> Shiloh Web Designs. All rights reserved</p>    
+      </header>
     </div>
-  </div>
+    <nav id="mobileNav" class="header-nav header-nav-mobile">
+      <div id="closeMenu" class="close-icon"> </div>
+      <a href="/" class="header-item active-mobile-header">Home</a>
+      <a href="#services" class="header-item">Services</a>
+      <a href="#portfolio" class="header-item">Portfolio</a>   
+      <a href="#contact" class="header-item">Contact</a>
+    </nav>
   
+    <div id="banner" class="img-banner main-banner full-width grid-center">
+      <div class="banner-content page-width fade-in">
+        <div class="banner-text slide-in-left">
+          <h1>Web Development and Design</h1>
+          <p>Elevate your online presence with custom website development and hosting solutions, where high performing websites meets innovative design.</p>
+        </div>  
+        <img title="Main Banner" class="banner-graphic" src="images/BannerGraphic.webp" alt="Webpage example" height="400" width="700">
+      </div>
+    </div>
+  
+    <main id="mainContent">
+  
+      <section id="services" class="full-width grid-center fade-in">
+        <div class="page-width grid gap-1">
+          <h2 class="tagline">WHAT WE DO</h2>
+          <div class="flex-wrap align-top gap img-w-txt">
+            <div class="flex-wrap txt center-txt slide-in-left">
+              <img class="sml-img" src="images/ServiceGraphic.webp" alt="Graphic of responsive web design" title="Responsive graphic" height="400" width="400">
+              <h2>Responsive Websites and Hosting</h2>
+              <p>All-in-one solutions from development to hosting, with captivating landing pages, customizable eCommerce solutions, and SEO expertise. Designed mobile first to ensure a responsive design that ranks high on google.</p>   
+            </div>
+            <div class="accordion-cont slide-in-up">
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h2>Landing Pages</h2>
+                </div>
+                <div class="accordion-content open-accordion">
+                  <p>Elevate your online presence with our high performing websites using meticulously hand-coded solutions without the help of CMS tools like WordPress. Experience the blend of aesthetic appeal and top-notch SEO for landing pages that captivate and rank.</p>
+                </div> 
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h2>eCommerce</h2>
+                </div>
+                <div class="accordion-content">
+                  <p>We provide end-to-end eCommerce solutions specializing in fully customizable Shopify stores. From concept to launch, we prioritize your vision, ensuring a user-friendly shopping experience and a visually compelling storefront that reflects your brand identity.</p>
+                </div>        
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h2>SEO Services</h2>
+                </div>
+                <div class="accordion-content">
+                  <p>Boost your online visibility with our SEO expertise. We optimize your site for search engines with strategic keywords and following strict standards. We ensure your website not only looks great but ranks high, driving organic traffic and business success.</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="accordion-header">
+                  <h2>IT Support</h2>
+                </div>
+                <div class="accordion-content">
+                  <p>We provide support for maintaining and updating existing websites, ensuring seamless functionality, security, and performance. From technical tune-ups to complete revamps, trust us to keep your web presence current and secure.</p>
+                </div>
+              </div>
+           </div>
+          
+          </div>  
+        </div>
+      </section>
+  
+      <section id="portfolio" class="full-width grid-center">
+        <div class="page-width grid gap fade-in">
+          <h2 class="tagline">SOME OF OUR WORK</h2>
+          <div class="flex-wrap gap">
+            <figure class="project-card col3-flex-item slide-in-left">
+              <img title="Nurse John Merch" src="images/NurseJohn.webp" alt="Image for Nurse John merch store" height="300" width="300" loading="lazy">
+              <figcaption class="overlay invert-txt">
+                <h3>Online eCommerce store for TikTok personality Nurse John to sell his merch.</h3>
+                <a target="_blank" href="https://nursejohnn.com/" class="btn">Visit Website</a>
+              </figcaption>
+            </figure>
+            <figure class="project-card col3-flex-item slide-in-left">
+              <img title="Entreprises Nortec Landing Page" src="images/Nortec.webp" alt="Image for Entreprises Nortec Landing page" height="300" width="300" loading="lazy">
+              <figcaption class="overlay invert-txt">
+                <h3>Custom landing page for local construction company.</h3>
+                <a target="_blank" href="https://www.entreprisesnortec.com/" class="btn">Visit Website</a>
+              </figcaption>
+            </figure>
+            <figure class="project-card col3-flex-item slide-in-left">
+              <img title="MLakhaBeauty Landing Page" src="images/MLakha.webp" alt="Image for MLakha Beauty Landing page" height="300" width="300" loading="lazy">
+              <figcaption class="overlay invert-txt">
+                <h3>Landing page and booking site made with a custom coded solution.</h3>
+                <a target="_blank" href="https://madhulakha.com/" class="btn">Visit Website</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+  
+      <section id="contact" class="img-banner full-width grid-center">
+        <div class="page-width grid gap-1 fade-in">
+          <h2 class="tagline">GET IN TOUCH</h2>
+          <div class="page-width-small center-me">
+            <p>Leave your name and email below, and we will be in contact with you as soon as possible!</p>
+            <form 
+              method="POST"
+              name="contact_form"
+              id="contact_form" 
+              class="grid-center gap full-width grid-2-col" 
+              data-netlify="true" 
+              data-netlify-recaptcha="true"
+              action="pages/success.html">
+              <input type="hidden" name="subject" value="Shiloh Web Designs Contact Form Submission" />
+              <div class="input-group">
+                  <label for="clientName">Name</label>
+                  <input type="text" id="clientName" name="clientName" required>
+              </div>
+              <div class="input-group">
+                  <label for="clientEmail">Email</label>
+                  <input type="text" id="clientEmail" name="email" required>
+              </div>
+              <div class="input-group grid-col-span-2" id="inputNumber">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" name="phoneNumber" id="phoneNumber">
+              </div>
+              <div class="input-group grid-col-span-2">
+                  <label for="messageInput">Message</label>
+                  <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
+              </div>                 
+              <div class="recaptcha grid-col-span-2" data-netlify-recaptcha="true"></div>
+              <input class="btn big-btn submit-btn grid-col-1-span-1" type="submit" name="submitForum" id="submitForum"> 
+            </form>
+          </div>
+        </div>
+      </section>
+  
+      <section id="about" class="full-width grid-center">
+        <div class="page-width grid gap fade-in">
+          <h2 class="tagline">GET TO KNOW ME</h2>
+          <div class="flex-wrap img-w-txt">
+            <img title="Picture of me" class="slide-in-left" src="images/Me.webp" alt="Photo of myself" height="400" width="400" loading="lazy">
+            <div class="txt slide-in-up">
+              <h3 class="emphasize">Shiloh R.</h3>
+              <p>Hey there! I'm Shiloh, owner and lead developer at Shiloh Web Designs. Recently equipped with a Bachelor's degree in Computer Science, I bring over 5 years of dedicated and passionate programming experience to every project.</p> 
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    </main>
+  
+    <section id="footer" class="full-width secondary-bg invert-txt grid-center">
+      <footer class="page-width grid gap">
+        <div class="footer-block footer-logo">
+          <a href="/" class="logo" aria-label="Click to return to home page">
+            <object data="images/ShilohLogo.svg" alt="Company Logo" title="Company Logo"></object>
+          </a>
+          <p>We are a website development and design company based in Montreal QC, Canada. Offering our services to small businesses looking to make their mark on the web!</p>
+        </div>     
+        <div class="footer-block">
+          <h3>Navigation</h3>
+          <nav>
+            <a href="/" class="footer-item">Home</a>
+            <a href="#services" class="footer-item">Services</a>
+            <a href="#portfolio" class="footer-item">Portfolio</a>   
+            <a href="#contact" class="footer-item">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-block">
+          <h3>Services</h3>
+          <nav>
+            <p class="footer-item">Web Design</p>
+            <p class="footer-item">eCommerce</p>
+            <p class="footer-item">SEO Services</p>
+            <p class="footer-item">Support</p>
+          </nav>
+        </div>
+      </footer>
+    </section>
+    <div class="full-width grid-center secondary-bg-no-grad copyright">
+      <div class="page-width">
+        <p>Made with &#x2764;&#xfe0f; by <a class="inline-link" href="index.html">Shiloh Web Designs</a></p>
+        <p>© <script>document.write(new Date().getFullYear())</script> Shiloh Web Designs. All rights reserved</p>    
+      </div>
+    </div>
+  </div> 
 </body>
 </html>
