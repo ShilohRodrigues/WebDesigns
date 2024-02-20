@@ -14,11 +14,22 @@
   <meta property="og:description" content="Elevate your online presence with Shiloh Web Designs. Custom website development and hosting solutions." />
   <meta property="og:image" content="https://shilohwebdesigns.com/images/SocialImg.png" />
   <meta property="og:image:secure_url" content="https://shilohwebdesigns.com/images/SocialImg.png" />
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/images/Favicon.ico?">
   <link rel="canonical" href="https://shilohwebdesigns.com">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+  <link rel="preload" fetchpriority="high" as="image" href="/images/Banner.webp" type="image/webp">
   <script src="script.js" defer></script>
   <title>Shiloh Web Designs - Web Development and Design</title>
+  <!-- Google Stuff -->
+  <script type="application/ld+json">
+    {"@context" : "https://shilohwebdesigns.com",
+     "@type" : "Web Development Company",  
+      "name" : "Shiloh Web Designs",
+      "url" : "https://shilohwebdesigns.com", 
+      "logo": "https://shilohwebdesigns.com/images/SocialImg.png" }
+  </script>
 </head>
 <body>
   
@@ -50,7 +61,7 @@
         <h1>Web Development and Design</h1>
         <p>Elevate your online presence with custom website development and hosting solutions, where high performing websites meets innovative design.</p>
       </div>  
-      <img title="Main Banner" class="banner-graphic" src="images/BannerGraphic.webp" alt="Sample desktop image" height="400" width="700">
+      <img title="Main Banner" class="banner-graphic" src="images/BannerGraphic.webp" alt="Webpage example" height="400" width="700">
     </div>
   </div>
 
@@ -61,7 +72,7 @@
         <h2 class="tagline">WHAT WE DO</h2>
         <div class="flex-wrap align-top gap img-w-txt">
           <div class="flex-wrap txt center-txt slide-in-left">
-            <img class="sml-img" src="images/ServiceGraphic.webp" alt="Graphic of responsive design" title="Responsive graphic" height="400" width="400">
+            <img class="sml-img" src="images/ServiceGraphic.webp" alt="Graphic of responsive web design" title="Responsive graphic" height="400" width="400">
             <h2>Responsive Websites and Hosting</h2>
             <p>All-in-one solutions from development to hosting, with captivating landing pages, customizable eCommerce solutions, and SEO expertise. Designed mobile first to ensure a responsive design that ranks high on google.</p>   
           </div>
