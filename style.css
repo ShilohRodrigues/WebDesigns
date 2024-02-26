@@ -731,6 +731,7 @@ form {
   position: sticky;
   bottom: 0;
   overflow: visible;
+  z-index: -1;
 }
 footer {
   -ms-grid-columns: auto auto auto;
